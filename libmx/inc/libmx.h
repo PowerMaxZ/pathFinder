@@ -21,7 +21,6 @@ void mx_print_strarr(char **arr, const char *delim);
 void mx_printint(int n);
 char *mx_nbr_to_hex(unsigned long nbr);
 unsigned long mx_hex_to_nbr(const char *s);
-char *mx_itoa(int number);
 void mx_foreach(int *arr, int size, void (*f)(int));
 int mx_strcmp(const char *s1, const char *s2);
 int mx_binary_search(char **arr, int size, const char *s, int *count);
@@ -67,8 +66,5 @@ void mx_print_unicode(wchar_t c);
 int mx_quicksort(char **arr, int left, int right);
 int mx_read_line(char **lineptr, int buf_size, char delim, const int fd);
 int mx_strncmp(const char *s1, const char *s2, size_t n);
-char *mx_file_to_str(const char *file);
-bool mx_isdigit(int c);
-int mx_atoi(const char *s);
 
 #endif

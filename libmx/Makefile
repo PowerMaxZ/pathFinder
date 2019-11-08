@@ -14,7 +14,6 @@ mx_get_char_index.c \
 mx_get_substr_index.c \
 mx_hex_to_nbr.c \
 mx_isspace.c \
-mx_itoa.c \
 mx_nbr_to_hex.c \
 mx_pow.c \
 mx_print_strarr.c \
@@ -41,7 +40,6 @@ mx_swap_char.c \
 mx_del_extra_spaces.c \
 mx_strsplit.c \
 mx_strjoin.c \
-mx_file_to_str.c \
 mx_read_line.c \
 mx_replace_substr.c \
 mx_memset.c \
@@ -59,9 +57,7 @@ mx_pop_front.c \
 mx_push_back.c \
 mx_push_front.c \
 mx_list_size.c \
-mx_sort_list.c \
-mx_atoi.c \
-mx_isdigit.c
+mx_sort_list.c
 
 SRCF = \
 src/mx_binary_search.c \
@@ -74,7 +70,6 @@ src/mx_get_char_index.c \
 src/mx_get_substr_index.c \
 src/mx_hex_to_nbr.c \
 src/mx_isspace.c \
-src/mx_itoa.c \
 src/mx_nbr_to_hex.c \
 src/mx_pow.c \
 src/mx_print_strarr.c \
@@ -101,7 +96,6 @@ src/mx_swap_char.c \
 src/mx_del_extra_spaces.c \
 src/mx_strsplit.c \
 src/mx_strjoin.c \
-src/mx_file_to_str.c \
 src/mx_read_line.c \
 src/mx_replace_substr.c \
 src/mx_memset.c \
@@ -119,9 +113,7 @@ src/mx_pop_front.c \
 src/mx_push_back.c \
 src/mx_push_front.c \
 src/mx_list_size.c \
-src/mx_sort_list.c \
-src/mx_isdigit.c \
-src/mx_atoi.c
+src/mx_sort_list.c
 
 OBJ = \
 mx_binary_search.o \
@@ -134,7 +126,6 @@ mx_get_char_index.o \
 mx_get_substr_index.o \
 mx_hex_to_nbr.o \
 mx_isspace.o \
-mx_itoa.o \
 mx_nbr_to_hex.o \
 mx_pow.o \
 mx_print_strarr.o \
@@ -161,7 +152,6 @@ mx_swap_char.o \
 mx_del_extra_spaces.o \
 mx_strsplit.o \
 mx_strjoin.o \
-mx_file_to_str.o \
 mx_read_line.o \
 mx_replace_substr.o \
 mx_memset.o \
@@ -179,9 +169,7 @@ mx_pop_front.o \
 mx_push_back.o \
 mx_push_front.o \
 mx_list_size.o \
-mx_sort_list.o \
-mx_atoi.o \
-mx_isdigit.o
+mx_sort_list.o
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic -g
 

@@ -1,27 +1,38 @@
 #include "libmx.h"
 
-char **mx_strsplit(const char *s, char c) {
-    if (!s) return NULL;
-    int size = mx_count_words(s, c);
-    char **res = (char **) malloc((size + 1) * sizeof (char *));
-    int i_res = 0;
-    int i_del = 0;
+int mx_count_words(const char *str, char c);
+int mx_strlen(const char *str);
+char *mx_strnew(const int size);
+char *mx_strncpy(char *dst, const char *src, int len);
+int mx_get_char_index(const char *str, char c);
+char *mx_strndup(const char *s, size_t n);
 
-    if (size == 1) {
-        res[0] = mx_strdup(s);
-        res[1] = NULL;
-        return res;
+
+char **mx_strsplit(const char *s, char c) {
+    if (!s) {
+        return NULL;
     }
-    while (*s) {
-        i_del = mx_get_char_index(s, c);
-        i_del = i_del == -1 ? i_del = mx_strlen(s) : i_del;
-        if (i_del) {
-            res[i_res] = mx_strndup(s, i_del);
-            s += mx_strlen(res[i_res]) - 1;
-            i_res++;
+    int size_arr = mx_count_words(s, c);
+    int counter = 0;
+    char **result = malloc(sizeof(char *) * (size_arr + 1));
+    int len = mx_strlen(s);
+    int index = 0;
+    if (size_arr == 1) {
+        result[0] = mx_strdup(s); //fdsa.fdsafdsa
+        result[1] = NULL;
+        return result;
+    }
+    for (int i = 0; i < len; i++) {
+        index = mx_get_char_index(s, c);
+        index = index == -1 ? mx_strlen(s) : index;
+        if (index) {
+            result[counter] = mx_strndup(s, index);
+            s += mx_strlen(result[counter]) - 1;
+            i += mx_strlen(result[counter]) - 1;
+            counter++;
         }
         s++;
-    }
-    res[i_res] = NULL;
-    return res;
+    } 
+    result[size_arr] = NULL;
+    return result;
 }
