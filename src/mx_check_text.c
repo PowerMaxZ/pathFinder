@@ -27,20 +27,14 @@ static bool mx_isvalid_line(char *line) {
     while (mx_isletter(line[first_index])) {
         first_index++;
     }
-    if (!first_index) {
-        return false;
-    }
-    if (line[first_index++] != '-') {
+    if (!first_index || line[first_index++] != '-') {
         return false;
     }
     second_index = first_index;
     while (mx_isletter(line[second_index])) {
         second_index++;
     }
-    if (second_index == first_index) {
-        return false;
-    }
-    if (line[second_index++] != ',') {
+    if (second_index == first_index || line[second_index++] != ',') {
         return false;
     }
     third_index = second_index;
